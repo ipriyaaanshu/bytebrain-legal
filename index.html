@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteBrain Legal Agent — Contract Risk Analysis in 30 Seconds</title>
+  <meta name="description" content="AI-powered contract risk analysis with exact clause citations, missing clause detection, and an immutable audit trail. Built for founders, attorneys, and CPAs." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f4ff',
+              100: '#dde6ff',
+              200: '#c3d1ff',
+              400: '#7b9eff',
+              500: '#4f73f5',
+              600: '#3a59e8',
+              700: '#2e47cc',
+              800: '#2438a6',
+              900: '#1a2c82',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .gradient-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    }
+    .glow {
+      box-shadow: 0 0 60px rgba(79, 115, 245, 0.15), 0 0 120px rgba(79, 115, 245, 0.05);
+    }
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    }
+    .badge {
+      background: linear-gradient(135deg, #4f73f5, #7b9eff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white text-gray-900 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <span class="font-bold text-gray-900 text-lg">ByteBrain <span class="text-brand-600">Legal</span></span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+        <a href="#how-it-works" class="hover:text-gray-900 transition-colors">How it works</a>
+        <a href="#differentiators" class="hover:text-gray-900 transition-colors">Why ByteBrain</a>
+      </div>
+      <a href="#early-access" class="bg-brand-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-700 transition-colors">
+        Request Early Access
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="gradient-hero pt-32 pb-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-200 text-sm font-medium px-4 py-2 rounded-full mb-8">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        Now in early access — first 10 design partners free for 3 months
+      </div>
+
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+        Contract risk analysis<br />
+        <span class="text-brand-400">in 30 seconds.</span><br />
+        <span class="text-gray-300 text-4xl md:text-5xl font-bold">Audit-ready.</span>
+      </h1>
+
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Upload any contract. Get a structured risk report with exact clause citations, missing clause detection, and an immutable audit trail. No hallucinations. No guessing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <a href="#early-access" class="bg-brand-500 text-white font-semibold px-8 py-4 rounded-xl hover:bg-brand-600 transition-colors text-lg glow">
+          Request Early Access →
+        </a>
+        <a href="#how-it-works" class="bg-white/10 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors text-lg">
+          See how it works
+        </a>
+      </div>
+
+      <!-- Social proof bar -->
+      <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-400">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Under 30 seconds per document
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Exact clause citations — no hallucinations
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Self-hosted deployment available
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          API-first — embed in any workflow
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="py-24 px-6 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">The problem</p>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Contract review is broken</h2>
+        <p class="text-xl text-gray-500 max-w-2xl mx-auto">Every week, founders, attorneys, and CPAs sign contracts that cost them money — because manual review is slow, expensive, and misses things.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-3">Missed clauses that cost you</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Auto-renewal traps. One-sided IP assignments. Liability caps you didn't see. Manual review misses them — especially when you're rushing to close.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-3">2–4 hours per document</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">That's a founder's afternoon. That's $400–$800 of attorney time. For a routine NDA review. Multiplied across every vendor, partner, and hire.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.347.347A3.001 3.001 0 0011 22H9a3 3 0 01-2.83-2.001l-.348-.347z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-3">AI hallucinations are worse</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">General AI tools cite clauses that don't exist. Lawyers have been sanctioned for AI-generated citations. Confident wrong answers are more dangerous than slow right ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">How it works</p>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Three steps. Under 30 seconds.</h2>
+        <p class="text-xl text-gray-500">No training. No setup. Upload and go.</p>
+      </div>
+
+      <div class="relative">
+        <!-- Connector line (desktop) -->
+        <div class="hidden md:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200"></div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="relative inline-flex">
+              <div class="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-brand-200">
+                <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                </svg>
+              </div>
+              <span class="absolute -top-2 -right-2 w-7 h-7 bg-gray-900 text-white text-xs font-bold rounded-full flex items-center justify-center">1</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900 mb-3">Upload your contract</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">PDF, DOCX, or plain text. NDA, vendor agreement, employment contract, SAFE — the agent auto-detects the document type.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="relative inline-flex">
+              <div class="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-brand-200">
+                <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2" />
+                </svg>
+              </div>
+              <span class="absolute -top-2 -right-2 w-7 h-7 bg-gray-900 text-white text-xs font-bold rounded-full flex items-center justify-center">2</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900 mb-3">Agent analyzes in seconds</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Clause-by-clause analysis using Anthropic's structured output. Risk scoring, missing clause detection, and flagging of unusual terms — all in parallel.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="relative inline-flex">
+              <div class="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-brand-200">
+                <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <span class="absolute -top-2 -right-2 w-7 h-7 bg-gray-900 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900 mb-3">Get your audit-ready report</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Structured risk report with exact clause citations (Section X.X, Page N), severity levels, recommended actions, and a downloadable PDF you can share with clients or file.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample output preview -->
+      <div class="mt-20 bg-gray-900 rounded-2xl p-8 text-left overflow-hidden">
+        <div class="flex items-center gap-2 mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="text-gray-400 text-sm ml-4 font-mono">sample_nda_analysis.json</span>
+        </div>
+        <pre class="text-sm font-mono text-gray-300 overflow-x-auto leading-relaxed"><code>{
+  <span class="text-brand-400">"document_type"</span>: <span class="text-green-400">"NDA"</span>,
+  <span class="text-brand-400">"risk_score"</span>: <span class="text-amber-400">72</span>,
+  <span class="text-brand-400">"risk_level"</span>: <span class="text-red-400">"HIGH"</span>,
+  <span class="text-brand-400">"critical_findings"</span>: [
+    {
+      <span class="text-brand-400">"severity"</span>: <span class="text-red-400">"CRITICAL"</span>,
+      <span class="text-brand-400">"clause_type"</span>: <span class="text-green-400">"Non-Compete"</span>,
+      <span class="text-brand-400">"citation"</span>: <span class="text-green-400">"Section 4.2, Page 3"</span>,
+      <span class="text-brand-400">"finding"</span>: <span class="text-green-400">"3-year post-termination non-compete with unlimited geographic scope. Potentially unenforceable in CA, NY."</span>,
+      <span class="text-brand-400">"recommended_action"</span>: <span class="text-green-400">"Negotiate scope reduction or geographic limits."</span>
+    }
+  ],
+  <span class="text-brand-400">"missing_clauses"</span>: [<span class="text-green-400">"Mutual NDA provisions"</span>, <span class="text-green-400">"Independent IP carve-out"</span>],
+  <span class="text-brand-400">"audit_trail"</span>: {
+    <span class="text-brand-400">"analyzed_at"</span>: <span class="text-green-400">"2026-03-18T02:31:07Z"</span>,
+    <span class="text-brand-400">"document_hash"</span>: <span class="text-green-400">"sha256:a1b2c3d4..."</span>,
+    <span class="text-brand-400">"skill_used"</span>: <span class="text-green-400">"nda-v1"</span>
+  }
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiators -->
+  <section id="differentiators" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Why ByteBrain</p>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Built differently from Ivo and LexIQ</h2>
+        <p class="text-xl text-gray-500 max-w-2xl mx-auto">We're not a Word plugin. We're not enterprise CLM software. We're an API-first contract intelligence agent built for speed, accuracy, and trust.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="flex items-start gap-5">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2">Exact clause citations</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Every finding references the exact section and page number. You can verify any finding in 10 seconds. No fabricated citations, ever.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="flex items-start gap-5">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2">Immutable audit trail</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Every analysis is timestamped and hashed. You always know what was reviewed, when, and what the agent found. Legal defensibility built in.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="flex items-start gap-5">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2">API-first design</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Not locked to Word or Salesforce. Call our REST API from any system — CRM, document management, email, or your own internal tools. Embed anywhere.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="flex items-start gap-5">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.347.347A3.001 3.001 0 0011 22H9a3 3 0 01-2.83-2.001l-.348-.347z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2">Detects what's missing</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Most tools only find risky clauses. We also surface missing standard terms — no mutual NDA provisions, no IP carve-outs, no limitation of liability. The gap is often the risk.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="flex items-start gap-5">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2">Self-hosted deployment</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Attorney-client privilege matters. With self-hosted deployment, your documents are processed locally — never sent to our servers. Full data control for law firms and CPAs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 card-hover">
+          <div class="flex items-start gap-5">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2">Extensible skill system</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Add custom analysis skills for your domain: GDPR, HIPAA, SOX, or your firm's specific playbook. Legal today, finance tomorrow, compliance next week.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="mt-16 overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-gray-100">
+              <th class="text-left py-4 text-gray-400 font-medium">Feature</th>
+              <th class="py-4 text-gray-900 font-bold text-center">ByteBrain Legal</th>
+              <th class="py-4 text-gray-400 font-medium text-center">Ivo / Juro</th>
+              <th class="py-4 text-gray-400 font-medium text-center">LexIQ</th>
+              <th class="py-4 text-gray-400 font-medium text-center">General AI (ChatGPT)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-50">
+            <tr>
+              <td class="py-3.5 text-gray-700">Exact clause citations</td>
+              <td class="py-3.5 text-center text-green-500">✓</td>
+              <td class="py-3.5 text-center text-gray-400">Partial</td>
+              <td class="py-3.5 text-center text-gray-400">Summary only</td>
+              <td class="py-3.5 text-center text-red-400">Hallucinations risk</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 text-gray-700">Missing clause detection</td>
+              <td class="py-3.5 text-center text-green-500">✓</td>
+              <td class="py-3.5 text-center text-gray-400">Limited</td>
+              <td class="py-3.5 text-center text-red-400">✗</td>
+              <td class="py-3.5 text-center text-gray-400">Inconsistent</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 text-gray-700">Audit trail</td>
+              <td class="py-3.5 text-center text-green-500">✓ Immutable</td>
+              <td class="py-3.5 text-center text-gray-400">Basic logs</td>
+              <td class="py-3.5 text-center text-red-400">✗</td>
+              <td class="py-3.5 text-center text-red-400">✗</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 text-gray-700">API-first</td>
+              <td class="py-3.5 text-center text-green-500">✓</td>
+              <td class="py-3.5 text-center text-red-400">Web UI / Word plugin</td>
+              <td class="py-3.5 text-center text-red-400">Word plugin only</td>
+              <td class="py-3.5 text-center text-green-500">✓</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 text-gray-700">Self-hosted option</td>
+              <td class="py-3.5 text-center text-green-500">✓</td>
+              <td class="py-3.5 text-center text-red-400">✗</td>
+              <td class="py-3.5 text-center text-red-400">✗</td>
+              <td class="py-3.5 text-center text-red-400">✗</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 text-gray-700">Target market</td>
+              <td class="py-3.5 text-center text-brand-600 font-semibold">Startups, attorneys, CPAs</td>
+              <td class="py-3.5 text-center text-gray-400">Enterprise</td>
+              <td class="py-3.5 text-center text-gray-400">Solo attorneys</td>
+              <td class="py-3.5 text-center text-gray-400">General</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Early feedback</p>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">What early users are saying</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Placeholder testimonials - will be replaced with real design partner quotes -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">"Finally a contract review tool that cites the actual clause instead of hallucinating. The audit trail alone would justify the cost."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold text-sm">DP</div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Design Partner</p>
+              <p class="text-gray-400 text-xs">Seed-stage startup founder</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">"I reviewed the same NDA manually and then ran it through ByteBrain. It caught a 3-year non-compete and flagged two missing provisions I completely missed."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold text-sm">DP</div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Design Partner</p>
+              <p class="text-gray-400 text-xs">Boutique law firm, transactional</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-6">"The self-hosted deployment was the deciding factor. My clients' data never leaves our environment. I can offer this as a value-add without any ethical concerns."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold text-sm">DP</div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Design Partner</p>
+              <p class="text-gray-400 text-xs">Solo CPA, 200+ business clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-gray-400 mt-6">Testimonials from early design partner program. Full names published with permission.</p>
+    </div>
+  </section>
+
+  <!-- Early Access Form -->
+  <section id="early-access" class="py-24 px-6 gradient-hero">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-brand-400 font-semibold text-sm uppercase tracking-wider mb-3">Early access</p>
+      <h2 class="text-4xl font-bold text-white mb-4">Be one of our first 10 design partners</h2>
+      <p class="text-xl text-gray-300 mb-10">
+        Design partners get 3 months free, weekly access to the team, and input on the product roadmap. We'll tune the agent to your specific document types.
+      </p>
+
+      <form
+        action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
+        method="POST"
+        class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8"
+      >
+        <input type="hidden" name="_subject" value="New Early Access Request — ByteBrain Legal" />
+        <input type="hidden" name="_next" value="" />
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+            class="bg-white/10 border border-white/20 text-white placeholder-gray-400 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Work email"
+            required
+            class="bg-white/10 border border-white/20 text-white placeholder-gray-400 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+          />
+        </div>
+        <input
+          type="text"
+          name="company"
+          placeholder="Company / firm name"
+          required
+          class="w-full bg-white/10 border border-white/20 text-white placeholder-gray-400 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent mb-4"
+        />
+        <select name="role" class="w-full bg-white/10 border border-white/20 text-gray-300 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent mb-6">
+          <option value="">I am a... (select role)</option>
+          <option value="startup-founder">Startup founder / operator</option>
+          <option value="attorney">Attorney / law firm</option>
+          <option value="cpa">CPA / accounting firm</option>
+          <option value="other">Other</option>
+        </select>
+        <button
+          type="submit"
+          class="w-full bg-brand-500 text-white font-bold py-4 rounded-xl hover:bg-brand-600 transition-colors text-lg"
+        >
+          Request Early Access →
+        </button>
+        <p class="text-gray-400 text-xs mt-4">No spam. No commitments. We'll reach out within 48 hours to schedule a 15-minute call.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-brand-600 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <span class="text-white font-bold">ByteBrain Labs</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#how-it-works" class="hover:text-white transition-colors">How it works</a>
+          <a href="#differentiators" class="hover:text-white transition-colors">Why ByteBrain</a>
+          <a href="#early-access" class="hover:text-white transition-colors">Early access</a>
+        </div>
+        <p class="text-sm">© 2026 ByteBrain Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
